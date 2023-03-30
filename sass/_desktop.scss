@@ -1,0 +1,98 @@
+@media (min-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+
+	.margin {
+		margin: 5px 40px;
+	}
+
+	.disabled {
+		opacity: 0;
+	}
+    
+	.box {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas:
+			'img header'
+			'img description'
+			'img switch';
+		width: 750px;
+		height: 275px;
+		overflow: visible;
+
+		&__img {
+			grid-area: img;
+			height: 275px;
+			border-radius: 10px 0 0 10px;
+		}
+
+		&__heading {
+			margin-top: 30px;
+			grid-area: header;
+			font-size: 20px;
+		}
+
+		&__description {
+			grid-area: description;
+		}
+
+		&__switch {
+			position: relative;
+			grid-area: switch;
+		}
+
+		&__author{
+			padding: 0 40px;
+		}
+
+		&__social {
+			position: absolute;
+			right: -55px;
+			top: -65px;
+			width: 180px;
+			height: 20px;
+			border-radius: 10px;
+			transition: opacity 0.3s;
+		}
+
+		&__social:after {
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			bottom: -5px;
+			right: calc(50% - 15px);
+			background-color: $verydarkgrayishblue;
+			rotate: 45deg;
+			content: '';
+		}
+
+		&__share {
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+
+		&__icons {
+			img {
+				margin: 5px;
+			}
+		}
+
+		&__arrow-up,
+		&__arrow-down {
+			display: none;
+		}
+
+		&__arrow-desktop {
+			display: block;
+			border: 2px solid transparent;
+			transition: all .3s;
+
+			&:hover{
+				border: 2px solid $desaturateddarkblue;
+			}
+		}
+	}
+}

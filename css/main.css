@@ -16,10 +16,6 @@ main {
   margin: 30px;
 }
 
-.disabled {
-  display: none;
-}
-
 .box {
   margin: 0 auto;
   width: 325px;
@@ -87,7 +83,7 @@ main {
 .box__date {
   color: hsl(212, 23%, 69%);
 }
-.box__arrow-up, .box__arrow-down {
+.box__arrow-up, .box__arrow-down, .box__arrow-desktop {
   width: 30px;
   height: 30px;
   border: none;
@@ -97,6 +93,9 @@ main {
 .box__arrow-down {
   background-color: hsl(214, 17%, 51%);
 }
+.box__arrow-desktop {
+  display: none;
+}
 
 .attribution {
   font-size: 11px;
@@ -104,5 +103,83 @@ main {
 }
 
 .attribution a {
-  color: hsl(214, 17%, 51%);
+  color: hsl(217, 19%, 35%);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .margin {
+    margin: 5px 40px;
+  }
+  .disabled {
+    opacity: 0;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "img header" "img description" "img switch";
+    width: 750px;
+    height: 275px;
+    overflow: visible;
+  }
+  .box__img {
+    grid-area: img;
+    height: 275px;
+    border-radius: 10px 0 0 10px;
+  }
+  .box__heading {
+    margin-top: 30px;
+    grid-area: header;
+    font-size: 20px;
+  }
+  .box__description {
+    grid-area: description;
+  }
+  .box__switch {
+    position: relative;
+    grid-area: switch;
+  }
+  .box__author {
+    padding: 0 40px;
+  }
+  .box__social {
+    position: absolute;
+    right: -55px;
+    top: -65px;
+    width: 180px;
+    height: 20px;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+  }
+  .box__social:after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: -5px;
+    right: calc(50% - 15px);
+    background-color: hsl(217, 19%, 35%);
+    rotate: 45deg;
+    content: "";
+  }
+  .box__share {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .box__icons img {
+    margin: 5px;
+  }
+  .box__arrow-up, .box__arrow-down {
+    display: none;
+  }
+  .box__arrow-desktop {
+    display: block;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .box__arrow-desktop:hover {
+    border: 2px solid hsl(214, 17%, 51%);
+  }
 }/*# sourceMappingURL=main.css.map */

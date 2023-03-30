@@ -17,11 +17,13 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ![Mobile](./screenshot-mobile.jpg)
 
+![Desktop](./screenshot-desktop.jpg)
 
 
 ### Links
 
-
+- Solution URL: [Solution](https://github.com/Bartol857/article-preview-component-challenge)
+- Live Site URL: [Live site](https://bartol857.github.io/article-preview-component-challenge/)
 
 ## My process
 
@@ -30,6 +32,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- GRID
 - Basic JS
 - Mobile-first workflow
 
